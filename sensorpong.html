@@ -84,6 +84,17 @@
             
             draw();
         })
+        
+        document.addEventListener('devicemotion', function(ev) {
+            var movex = ev.accelerationIncludingGravity.x;
+            if(movex < 0 && padx >= movex) {
+                padx -= movex;
+            } else if (movex > 0 && padx <= WIDTH - padw - movex) {
+                padx += movex;
+            }
+            
+            draw();
+        })
 
         var interval = init();
     </script>
