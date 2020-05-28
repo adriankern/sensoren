@@ -19,8 +19,8 @@
   
 <script>
 function ausrichtungAuslesen(ereignis) {
-    var winkelAlpha = Math.round(ereignis.alpha * 100) / 100; 
-    var winkelBeta = Math.round(ereignis.beta * 100) / 100;
+    var winkelAlpha = Math.round(ereignis.alpha); 
+    var winkelBeta = Math.round(ereignis.beta);
     var winkelGamma = Math.round(ereignis.gamma ) ;
     document.getElementById('datenAlpha').innerHTML = winkelAlpha;
     document.getElementById('datenBeta').innerHTML = winkelBeta;
@@ -34,10 +34,10 @@ window.onload = function() {
   
 window.ondevicemotion = function(ereignis){
     //console.log(ereignis);
-    var xaccel = Math.round(ereignis.acceleration.x * 100) / 100;
+    var xaccel = Math.round(ereignis.acceleration.x);
     document.getElementById("xaccel").innerHTML = xaccel;
   
-    var xgyro = Math.round(ereignis.accelerationIncludingGravity.x * 100) / 100;
+    var xgyro = Math.round(ereignis.accelerationIncludingGravity.x);
     document.getElementById("xgyro").innerHTML = xgyro;
 }
   
