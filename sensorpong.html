@@ -86,15 +86,7 @@
         })
         
         window.ondevicemotion = function(ev) {
-            var movex = Math.round(ev.accelerationIncludingGravity.x * 100);
-            console.log("Move X: " + movex);
-            if(movex < 0 && padx >= movex) {
-                padx -= movex;
-            } else if (movex > 0 && padx <= WIDTH - padw - movex) {
-                padx += movex;
-            }
-            
-            draw();
+            padx -= Math.round(ev.accelerationIncludingGravity.x * 100);
         }
 
         var interval = init();
