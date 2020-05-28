@@ -85,7 +85,7 @@
             draw();
         })
         
-        document.addEventListener('devicemotion', function(ev) {
+        window.ondevicemotion = function(ev) {
             var movex = Math.round(ev.accelerationIncludingGravity.x * 100);
             console.log("Move X: " + movex);
             if(movex < 0 && padx >= movex) {
@@ -95,7 +95,7 @@
             }
             
             draw();
-        })
+        }
 
         var interval = init();
     </script>
