@@ -85,9 +85,9 @@
             draw();
         })
         
-        window.ondevicemotion = function(ev) {
+        window.addEventListener('devicemotion', function(ev) {
             padx -= Math.round(ev.accelerationIncludingGravity.x * 100);
-        }
+        })
 
         var interval = init();
     </script>
