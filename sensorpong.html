@@ -75,16 +75,6 @@
             ball(x, y, 10)
         }
         
-        document.addEventListener('keydown', function(ev) {
-            if(ev.key == 'ArrowLeft' && padx >= 5) {
-                padx -= 5;
-            } else if (ev.key == 'ArrowRight' && padx <= WIDTH - padw - 5) {
-                padx += 5;
-            }
-            
-            draw();
-        })
-        
         window.ondevicemotion = function(ereignis) {
             padx -= Math.round(ereignis.accelerationIncludingGravity.x * 100) / 100;
         }
