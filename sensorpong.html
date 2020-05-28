@@ -86,7 +86,7 @@
         })
         
         document.addEventListener('devicemotion', function(ev) {
-            var movex = ev.accelerationIncludingGravity.x;
+            var movex = Math.round(ev.accelerationIncludingGravity.x * 100);
             console.log("Move X: " + movex);
             if(movex < 0 && padx >= movex) {
                 padx -= movex;
