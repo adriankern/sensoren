@@ -34,10 +34,10 @@ window.onload = function() {
   
 window.ondevicemotion = function(ereignis){
     //console.log(ereignis);
-    var xaccel = Math.round(ereignis.acceleration.x);
+    var xaccel = Math.round(ereignis.acceleration.x * 100);
     document.getElementById("xaccel").innerHTML = xaccel;
   
-    var xgyro = Math.round(ereignis.accelerationIncludingGravity.x);
+    var xgyro = Math.round(ereignis.accelerationIncludingGravity.x * 100);
     document.getElementById("xgyro").innerHTML = xgyro;
 }
   
