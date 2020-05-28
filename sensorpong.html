@@ -87,6 +87,7 @@
         
         document.addEventListener('devicemotion', function(ev) {
             var movex = ev.accelerationIncludingGravity.x;
+            console.log("Move X: " + movex);
             if(movex < 0 && padx >= movex) {
                 padx -= movex;
             } else if (movex > 0 && padx <= WIDTH - padw - movex) {
